@@ -7,6 +7,10 @@ Usage:
 	print_r(distance_by_haversine($location_one, $location_two));
 	
 	returns:  Array ( [meters] => 9979048.23 [kilometers] => 9979.05 )
+
+Inspiration: 
+	http://en.wikipedia.org/wiki/Haversine_formula
+	http://www.movable-type.co.uk/scripts/latlong.html
 */
 function distance_by_haversine($location_one, $location_two) {
 
