@@ -29,7 +29,7 @@ function distance_by_haversine($location_one, $location_two) {
 		}
 	}
 	
-	$radius = 6371000; // The equilateral radius of Earth = 6,378,100 meters.  Average radius is 6,371,000
+	$radius = 6371000; // The equilateral radius of Earth = 6,378,100 meters.  Average radius is 6,371,000 meters.
 	$latitude_distance = deg2rad($location_two['latitude'] - $location_one['latitude']);
 	$longitude_distance = deg2rad($location_two['longitude'] - $location_one['longitude']);
 	$latitude_one_radius = deg2rad($location_one['latitude']);
@@ -39,6 +39,5 @@ function distance_by_haversine($location_one, $location_two) {
 	$c = 2 * atan2(sqrt($a), sqrt(1-$a));
 	$distance = $radius * $c;
 	return array('meters' => round($distance,2), 'kilometers' => round($distance/1000, 2));
-	return $distance;
 }
 ?>
