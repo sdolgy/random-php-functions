@@ -1,4 +1,13 @@
 <?php
+
+/*
+Usage:
+	$location_one = array('latitude' => '50.010083','longitude' => '-110.113006');
+	$location_two = array('latitude' => '-21.805149','longitude' => '-49.089977');
+	print_r(distance_by_haversine($location_one, $location_two));
+	
+	returns:  Array ( [meters] => 9979048.23 [kilometers] => 9979.05 )
+*/
 function distance_by_haversine($location_one, $location_two) {
 
 	if (!isset($location_one) || !isset($location_two)) { 
